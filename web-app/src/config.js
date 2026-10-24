@@ -7,7 +7,7 @@
  */
 export const PLAN_API_URL =
   import.meta.env.VITE_PLAN_API_URL ||
-  'https://63l5xpc4uk.execute-api.us-west-2.amazonaws.com/prod/plan'
+  ''
 
 /**
  * CHAT_API_URL is the LLM assistant endpoint (POST { message, sessionId } ->

@@ -52,6 +52,11 @@ export default function ProgramDetails({ program, onClose }) {
 
   // Call the keyless planner endpoint with the chosen term + courses.
   const checkSchedule = async () => {
+    if (!PLAN_API_URL) {
+      setError('The live conflict checker is not available in this demo. Clone the repo and deploy the AWS backend to enable it.')
+      setStatus('error')
+      return
+    }
     setStatus('loading')
     setError('')
     setResult(null)
@@ -66,7 +71,11 @@ export default function ProgramDetails({ program, onClose }) {
       setResult(body)
       setStatus('done')
     } catch (e) {
-      setError(e.message || 'Something went wrong contacting the planner.')
+      if (e.message === 'Failed to fetch') {
+        setError('Could not reach the conflict checker — the backend API is not currently deployed. See the README to run it locally.')
+      } else {
+        setError(e.message || 'Something went wrong contacting the planner.')
+      }
       setStatus('error')
     }
   }
