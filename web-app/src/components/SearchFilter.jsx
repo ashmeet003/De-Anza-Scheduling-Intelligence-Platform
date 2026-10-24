@@ -67,6 +67,21 @@ export default function SearchFilter({ filters, onFilterChange }) {
             Reset Filters
           </button>
         )}
+
+        <a
+          href="/dashboard.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="dashboard-link"
+        >
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+          </svg>
+          Conflict Dashboard
+        </a>
       </div>
     </div>
   )

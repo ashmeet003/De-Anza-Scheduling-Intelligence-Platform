@@ -88,6 +88,36 @@ body {
   font-weight: 500;
 }
 
+.dashboard-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1rem;
+  background: var(--da-gold-lighter);
+  color: var(--da-gold-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--da-gold);
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  margin-left: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-link:hover {
+  background: var(--da-gold-light);
+  border-color: var(--da-gold-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard-link svg {
+  flex-shrink: 0;
+  color: var(--da-gold-dark);
+}
+
 .app-main {
   max-width: 1400px;
   margin: 0 auto;

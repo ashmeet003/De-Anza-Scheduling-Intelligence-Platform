@@ -36,3 +36,9 @@ Thumbs.db
 
 # Data (large files tracked separately)
 /data
+
+# Kiro IDE internal files
+.kiro/
+
+# AgentCore deployment config (contains AWS account ID, ARNs, agent IDs)
+agentcore/.bedrock_agentcore.yaml
