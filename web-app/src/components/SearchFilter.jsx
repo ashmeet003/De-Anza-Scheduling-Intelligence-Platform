@@ -69,7 +69,7 @@ export default function SearchFilter({ filters, onFilterChange }) {
         )}
 
         <a
-          href="/dashboard.html"
+          href={`${import.meta.env.BASE_URL}dashboard.html`}
           target="_blank"
           rel="noopener noreferrer"
           className="dashboard-link"
